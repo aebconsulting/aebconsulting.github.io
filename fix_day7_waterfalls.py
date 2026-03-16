@@ -68,9 +68,12 @@ The ONLY open route into Chimney Rock is <strong>NC-9 through Lake Lure</strong>
 <li><strong style="color:#15803d;">Chimney Rock reservation (moved from 3/16).</strong> Check with park about using timed-entry ticket on 3/17 &mdash; call <a href="tel:8286259611">(828) 625-9611</a> to confirm.</li>
 </ul>
 
-<h3>Lunch (11:45 AM&ndash;12:30 PM)</h3>
+<h3>Lunch &mdash; RiverWatch Bar &amp; Grill (11:45 AM&ndash;12:30 PM)</h3>
+<p><strong><a href="https://www.riverwatchbarandgrill.com/" target="_blank" rel="noopener noreferrer">RiverWatch Bar &amp; Grill</a></strong> &mdash; 379 Main St, Chimney Rock, NC &mdash; right at the park entrance on the Rocky Broad River.</p>
 <ul>
-<li>Quick lunch in <strong>Chimney Rock Village</strong> (restaurants right at the park entrance) or <strong>Lake Lure</strong> (7 min south)</li>
+<li>Burgers, wings, tacos, wraps &mdash; solid casual food with <strong>outdoor deck overlooking the river</strong></li>
+<li>Kid-friendly, quick service. Reopened post-Helene and back in action.</li>
+<li>Perfect fuel-up before the 1 hr 15 min drive to Pisgah waterfalls</li>
 </ul>
 
 <h3>Afternoon &mdash; Pisgah Waterfall Trail (1:45&ndash;4:30 PM)</h3>
@@ -100,8 +103,8 @@ The ONLY open route into Chimney Rock is <strong>NC-9 through Lake Lure</strong>
 <li><strong>10:00&ndash;10:30 AM</strong> &mdash; Arrive at Chimney Rock, park, tickets</li>
 <li><strong>10:30 AM</strong> &mdash; Elevator to the summit</li>
 <li><strong>10:45 AM</strong> &mdash; Hike Skyline&ndash;Cliff Trail to Exclamation Point (0.4 mi, ~30 min with photos)</li>
-<li><strong>11:15 AM</strong> &mdash; Head back down, browse Chimney Rock Village</li>
-<li><strong>11:45 AM</strong> &mdash; Lunch in the Village or Lake Lure</li>
+<li><strong>11:15 AM</strong> &mdash; Head back down to Chimney Rock Village</li>
+<li><strong>11:45 AM</strong> &mdash; Lunch at <strong>RiverWatch Bar &amp; Grill</strong> (379 Main St &mdash; river deck, burgers &amp; tacos)</li>
 <li><strong>12:30 PM</strong> &mdash; Depart for Pisgah waterfalls (~1 hr 15 min via US-64 W &rarr; US-276 N)</li>
 <li><strong>1:45 PM</strong> &mdash; <strong>Looking Glass Falls</strong> &mdash; stairs down to base, photos (15&ndash;20 min)</li>
 <li><strong>2:10 PM</strong> &mdash; Drive 1 mi north on US-276</li>
@@ -168,7 +171,7 @@ def main():
     print("Schedule:")
     print("  8:45 AM   - Depart cabin")
     print("  10:00 AM  - Arrive Chimney Rock -> elevator + Exclamation Point")
-    print("  11:45 AM  - Lunch in the Village")
+    print("  11:45 AM  - Lunch at RiverWatch Bar & Grill")
     print("  12:30 PM  - Drive to Pisgah (~1h15m)")
     print("  1:45 PM   - Looking Glass Falls (roadside, 15-20 min)")
     print("  2:15 PM   - Moore Cove Falls (1.2 mi RT, walk BEHIND the falls)")
