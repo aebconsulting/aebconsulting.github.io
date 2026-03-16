@@ -8,7 +8,7 @@ All waterfalls are sequential along US-276 heading north:
   2. Moore Cove Falls (1.2 mi RT - walk BEHIND a waterfall)
   3. Sliding Rock (roadside - quick look)
   4. Skinny Dip Falls (BRP MP 417 - if time/energy)
-Then home via BRP north -> NC-191
+Then dinner at Brooks Tavern in Hendersonville -> home
 
 Run from the trip-plan repo root: python fix_day7_waterfalls.py
 """
@@ -28,7 +28,7 @@ def write_html(content):
 NEW_DAY7 = """<h2 id="day-7">Day 7 &mdash; Tuesday, March 17th: Chimney Rock + Waterfall Trail</h2>
 <p style="margin:-8px 0 12px 0;font-size:0.95em;color:#666;font-style:italic;font-family:Fraunces,serif;">&#9968;&#65039; Elevator to the Summit + Pisgah Waterfall Trail &mdash; up to 4 waterfalls in one afternoon</p>
 
-<p><strong>&#128205; Route &amp; Distances:</strong> <a href="https://www.google.com/maps/dir/35.612841,-82.665031/Chimney+Rock+State+Park,+NC/Looking+Glass+Falls,+Pisgah+Forest,+NC/Moore+Cove+Falls,+NC/Sliding+Rock,+Pisgah+Forest,+NC/Skinny+Dip+Falls,+NC/35.612841,-82.665031" target="_blank" rel="noopener noreferrer">Day 7 Google Map</a></p>
+<p><strong>&#128205; Route &amp; Distances:</strong> <a href="https://www.google.com/maps/dir/35.612841,-82.665031/Chimney+Rock+State+Park,+NC/Looking+Glass+Falls,+Pisgah+Forest,+NC/Moore+Cove+Falls,+NC/Sliding+Rock,+Pisgah+Forest,+NC/Skinny+Dip+Falls,+NC/142+3rd+Ave+W,+Hendersonville,+NC/35.612841,-82.665031" target="_blank" rel="noopener noreferrer">Day 7 Google Map</a></p>
 
 <table>
 <thead><tr><th>#</th><th>Segment</th><th>Miles</th><th>Drive Time</th><th>Route</th></tr></thead>
@@ -37,9 +37,10 @@ NEW_DAY7 = """<h2 id="day-7">Day 7 &mdash; Tuesday, March 17th: Chimney Rock + W
 <tr><td>2</td><td>Chimney Rock &rarr; Looking Glass Falls</td><td>~55 mi</td><td>~1 hr 15 min</td><td>US-64 W through Bat Cave &rarr; I-26 W &rarr; NC-280 E &rarr; US-276 N into Pisgah NF</td></tr>
 <tr><td>3</td><td>Looking Glass Falls &rarr; Moore Cove Falls</td><td>~1 mi</td><td>~2 min</td><td>Continue north on US-276</td></tr>
 <tr><td>4</td><td>Moore Cove Falls &rarr; Sliding Rock</td><td>~3 mi</td><td>~5 min</td><td>Continue north on US-276</td></tr>
-<tr><td>5</td><td>Sliding Rock &rarr; Skinny Dip Falls (BRP MP 417)</td><td>~11 mi</td><td>~20 min</td><td>US-276 N &rarr; BRP at MP 411.8 &rarr; south to MP 417</td></tr>
-<tr><td>6</td><td>Skinny Dip Falls &rarr; Candler rental</td><td>~23 mi</td><td>~45 min</td><td>BRP north &rarr; NC-191 exit near NC Arboretum</td></tr>
-<tr><td></td><td><strong>Day 7 Total</strong></td><td><strong>~138 mi</strong></td><td><strong>~3 hr 37 min driving</strong></td><td><em>All waterfalls are sequential along US-276 &mdash; no backtracking!</em></td></tr>
+<tr><td>5</td><td>Sliding Rock &rarr; Skinny Dip Falls (BRP MP 417)</td><td>~11 mi</td><td>~20 min</td><td>US-276 N &rarr; BRP at MP 411.8 &rarr; south to MP 417 <em>(optional)</em></td></tr>
+<tr><td>6</td><td>Last waterfall &rarr; <a href="https://brookstavern.com/" target="_blank" rel="noopener noreferrer">Brooks Tavern</a> (Hendersonville)</td><td>~25 mi</td><td>~30 min</td><td>NC-280 W &rarr; I-26 S &rarr; Exit 49B &rarr; 3rd Ave W</td></tr>
+<tr><td>7</td><td>Brooks Tavern &rarr; Candler rental</td><td>~26 mi</td><td>~30 min</td><td>I-26 W &rarr; US-74 W</td></tr>
+<tr><td></td><td><strong>Day 7 Total</strong></td><td><strong>~166 mi</strong></td><td><strong>~4 hr 12 min driving</strong></td><td><em>Waterfalls are sequential on US-276 &mdash; Hendersonville is on the way home!</em></td></tr>
 </tbody>
 </table>
 
@@ -107,29 +108,38 @@ The ONLY open route into Chimney Rock is <strong>NC-9 through Lake Lure</strong>
 <li><strong>2:15 PM</strong> &mdash; <strong>Moore Cove Falls</strong> &mdash; hike 1.2 mi RT through forest, walk behind the falls (30&ndash;45 min)</li>
 <li><strong>3:00 PM</strong> &mdash; Drive 3 mi north on US-276</li>
 <li><strong>3:05 PM</strong> &mdash; <strong>Sliding Rock</strong> &mdash; quick roadside stop, watch the water (10 min)</li>
-<li><strong>3:15 PM</strong> &mdash; <em>Decision point: head home or continue to Skinny Dip Falls?</em></li>
+<li><strong>3:15 PM</strong> &mdash; <em>Decision point: head to dinner or continue to Skinny Dip Falls?</em></li>
 <li><strong>3:35 PM</strong> &mdash; &#9200; <strong>Skinny Dip Falls</strong> (if time) &mdash; 1 mi RT, cascading falls with pools (30&ndash;45 min)</li>
-<li><strong>4:15&ndash;4:30 PM</strong> &mdash; Head home via BRP north &rarr; NC-191 (~45 min to cabin)</li>
-<li><strong>5:00&ndash;5:15 PM</strong> &mdash; Back at the cabin</li>
+<li><strong>4:15&ndash;4:30 PM</strong> &mdash; Head to Hendersonville for dinner (~25&ndash;30 min via NC-280 &rarr; I-26 S)</li>
+<li><strong>5:00 PM</strong> &mdash; Arrive Hendersonville &mdash; walk Main Street if time, let Ethan stretch his legs</li>
+<li><strong>5:30&ndash;6:00 PM</strong> &mdash; <strong><a href="https://brookstavern.com/" target="_blank" rel="noopener noreferrer">Brooks Tavern</a></strong> (142 3rd Ave W) &mdash; smash burgers, hand-cut fries, craft beer. Kid-friendly. No reservations, arrive early to avoid a wait. Open until 8 PM.</li>
+<li><strong>7:00&ndash;7:30 PM</strong> &mdash; Head to cabin (~30 min via I-26 W)</li>
+<li><strong>7:30&ndash;8:00 PM</strong> &mdash; Back at the cabin</li>
 </ul>
 
 <div class="tip" style="background:#fff8e1;border-left:4px solid #f9a825;padding:12px 16px;border-radius:0 8px 8px 0;margin:14px 0;font-size:0.95em;">
-<strong>Tip:</strong> The waterfalls are all along one road (US-276 north) so there&rsquo;s zero backtracking &mdash; just keep driving north and stop at each one. After yesterday&rsquo;s storms, water flow will be spectacular. Moore Cove Falls is the star &mdash; walking behind a waterfall is a core memory for Ethan. Bring a jacket for the mist!
+<strong>Tip:</strong> The waterfalls are all along one road (US-276 north) &mdash; zero backtracking. After yesterday&rsquo;s storms, water flow will be spectacular. Moore Cove Falls is the star &mdash; walking behind a waterfall is a core memory for Ethan. Hendersonville for dinner is right on the way home, so no wasted driving. Bring a jacket for the mist!
 </div>
 
 <p><em>Note: BRP speed limit is 45 mph max; expect 30&ndash;35 mph on curves. Skinny Dip Falls (MP 417) is within the OPEN BRP section (MP 393.6&ndash;420.2) but you cannot continue south past MP 420.</em></p>
 
-<p><strong>Evening &mdash; St. Patrick&rsquo;s Day!</strong></p>
+<h3>Dinner &mdash; Brooks Tavern, Hendersonville (5:30&ndash;7:00 PM)</h3>
+
+<p><strong><a href="https://brookstavern.com/" target="_blank" rel="noopener noreferrer">Brooks Tavern</a></strong> &mdash; 142 3rd Ave W, Hendersonville, NC 28792 &mdash; <a href="tel:8285959994">(828) 595-9994</a></p>
 <ul>
-<li>Family-friendly St. Patrick&rsquo;s Day dinner (green everything!)</li>
-<li>Parents&rsquo; option: Brewery crawl if kid goes to bed at lodging</li>
-<li>Look for <strong>Random Acts of Fringe</strong> pop-ups around downtown (free, all-ages)</li>
+<li>Known for the <strong>best smash burgers in town</strong> &mdash; 100% Certified Angus Beef, hand-cut fries, 20 oz craft beer pours</li>
+<li>Kid-friendly &mdash; casual pub atmosphere, one block off Main Street</li>
+<li>Open until 8 PM (Tue) &mdash; <strong>no reservations</strong>, arrive by 5:30 to beat the rush</li>
+<li>St. Patrick&rsquo;s Day bonus: ask about any holiday specials!</li>
+<li>Hendersonville is right on the way home from Pisgah &mdash; ~25 min from the waterfalls, ~30 min to cabin after dinner</li>
 </ul>
+
+<p><strong>While you wait / after dinner:</strong> Walk a block to <strong>Main Street Hendersonville</strong> &mdash; shops, ice cream, and a nice evening stroll. You were here on Day 4 so you know the lay of the land.</p>
 
 <p><strong>Backup if kid is tired after Chimney Rock:</strong></p>
 <ul>
-<li><strong>Easy mode:</strong> Just do Looking Glass Falls (roadside, 15 min) &rarr; head home. Still see one waterfall with almost no effort.</li>
-<li><strong>Skip waterfalls entirely:</strong> Head back to the cabin for rest, or <strong>Mountain Play Lodge</strong> for indoor play.</li>
+<li><strong>Easy mode:</strong> Just do Looking Glass Falls (roadside, 15 min) &rarr; head straight to Brooks Tavern for an early dinner. Still see one waterfall with almost no effort.</li>
+<li><strong>Skip waterfalls entirely:</strong> Head to Hendersonville early &mdash; walk Main Street, grab dinner at Brooks Tavern, relax.</li>
 </ul>
 
 <p><strong>Scouting note:</strong> The drive from Chimney Rock through Bat Cave and into Pisgah NF gives you a feel for the full range of WNC geography &mdash; from the gorge to the deep forest. Notice how close world-class waterfalls are to Asheville. The US-276 corridor through Pisgah is everyone&rsquo;s backyard playground.</p>
@@ -164,7 +174,10 @@ def main():
     print("  2:15 PM   - Moore Cove Falls (1.2 mi RT, walk BEHIND the falls)")
     print("  3:05 PM   - Sliding Rock (quick stop)")
     print("  3:35 PM   - Skinny Dip Falls (if time & energy, 1 mi RT)")
-    print("  ~5:00 PM  - Back at cabin")
+    print("  5:00 PM   - Arrive Hendersonville")
+    print("  5:30 PM   - Dinner at Brooks Tavern (smash burgers, craft beer)")
+    print("  7:00 PM   - Head to cabin (~30 min)")
+    print("  7:30 PM   - Back at cabin")
     print("")
     print("Preview: python -m http.server 8000")
     print("Then open http://localhost:8000 in your browser")
