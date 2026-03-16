@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>12-Day Family Road Trip Plan — March 2026</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+<style>
+  :root { --blue: #1a73e8; --dark: #222; --gray: #666; --light: #f8f9fa; --border: #e0e0e0; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; color: var(--dark); line-height: 1.6; }
+  a { color: var(--blue); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+
+  .header { background: linear-gradient(135deg, #1a5276, #2e86c1); color: #fff; padding: 40px 20px; text-align: center; }
+  .header h1 { font-size: 1.8em; margin-bottom: 6px; }
+  .header p { opacity: 0.85; font-size: 1.05em; }
+  .back-link { display: inline-block; margin: 16px 20px; font-size: 0.95em; }
+
+  .container { max-width: 900px; margin: 0 auto; padding: 20px; }
+
+  /* Day navigation */
+  .day-nav { display: flex; flex-wrap: wrap; gap: 6px; margin: 20px 0; justify-content: center; }
+  .day-nav a { padding: 6px 12px; border-radius: 20px; background: var(--light); border: 1px solid var(--border); font-size: 0.85em; color: var(--dark); transition: all 0.2s; }
+  .day-nav a:hover, .day-nav a.active { background: var(--blue); color: #fff; border-color: var(--blue); text-decoration: none; }
+
+  /* Hike sections */
+  .hike-section { margin: 30px 0; border: 1px solid var(--border); border-radius: 12px; overflow: hidden; background: #fff; box-shadow: 0 2px 8px rgba(0,0,0,0.06); }
+  .hike-header { padding: 20px 24px; background: var(--light); border-bottom: 1px solid var(--border); }
+  .hike-header h2 { font-size: 1.35em; margin-bottom: 4px; }
+  .hike-header .subtitle { color: var(--gray); font-size: 0.95em; }
+  .hike-body { padding: 24px; }
+  .hike-body h3 { font-size: 1.1em; margin: 18px 0 8px; color: #1a5276; }
+  .hike-body h3:first-child { margin-top: 0; }
+
+  .map-container { height: 420px; border-radius: 8px; overflow: hidden; border: 1px solid var(--border); margin: 12px 0; }
+
+  .details-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 12px; margin: 14px 0; }
+  .detail-card { background: var(--light); border-radius: 8px; padding: 12px 16px; }
+  .detail-card .label { font-size: 0.8em; text-transform: uppercase; letter-spacing: 0.5px; color: var(--gray); }
+  .detail-card .value { font-size: 1.05em; font-weight: 600; margin-top: 2px; }
+
+  .trail-list { list-style: none; padding: 0; }
+  .trail-list li { padding: 10px 14px; border-left: 3px solid var(--blue); margin: 8px 0; background: var(--light); border-radius: 0 6px 6px 0; }
+  .trail-list li strong { display: block; }
+  .trail-list li span { font-size: 0.9em; color: var(--gray); }
+
+  .timeline { margin: 16px 0; }
+  .timeline-item { display: flex; gap: 14px; padding: 10px 0; border-bottom: 1px solid #f0f0f0; }
+  .timeline-item:last-child { border-bottom: none; }
+  .timeline-time { min-width: 90px; font-weight: 600; color: var(--blue); font-size: 0.95em; }
+  .timeline-desc { flex: 1; }
+
+  .tip { background: #fff8e1; border-left: 4px solid #f9a825; padding: 12px 16px; border-radius: 0 8px 8px 0; margin: 14px 0; font-size: 0.95em; }
+
+  .footer { text-align: center; padding: 30px; color: var(--gray); font-size: 0.85em; border-top: 1px solid var(--border); margin-top: 40px; }
+
+  @media (max-width: 600px) {
+    .header h1 { font-size: 1.4em; }
+    .map-container { height: 300px; }
+    .details-grid { grid-template-columns: 1fr 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>12-Day Family Road Trip</h1>
+  <p>March 2026 — Southeast US Adventure</p>
+</div>
+
+<a class="back-link" href="/">&larr; Back to Projects</a>
+
+<div class="container">
+
+  <div class="day-nav">
+    <a href="#chimney-rock" class="active">Chimney Rock</a>
+    <a href="#looking-glass">Looking Glass Falls</a>
+  </div>
+
+  <!-- ============ CHIMNEY ROCK ============ -->
+  <div class="hike-section" id="chimney-rock">
+    <div class="hike-header">
+      <h2>Chimney Rock State Park</h2>
+      <div class="subtitle">Morning Hike — Chimney Rock, NC</div>
+    </div>
+    <div class="hike-body">
+
+      <h3>Trail Map</h3>
+      <div id="map-chimney" class="map-container"></div>
+
+      <h3>Park Details</h3>
+      <div class="details-grid">
+        <div class="detail-card">
+          <div class="label">Location</div>
+          <div class="value">Chimney Rock, NC</div>
+        </div>
+        <div class="detail-card">
+          <div class="label">Park Hours</div>
+          <div class="value">8:30 AM – 5:30 PM</div>
+        </div>
+        <div class="detail-card">
+          <div class="label">Admission</div>
+          <div class="value">$17 adults / $8 kids</div>
+        </div>
+        <div class="detail-card">
+          <div class="label">Elevation</div>
+          <div class="value">2,280 ft summit</div>
+        </div>
+      </div>
+
+      <h3>Recommended Trails</h3>
+      <ul class="trail-list">
+        <li>
+          <strong>Hickory Nut Falls Trail</strong>
+          <span>1.4 mi round trip · Easy/Moderate · Leads to 404-ft waterfall</span>
+        </li>
+        <li>
+          <strong>Exclamation Point Trail</strong>
+          <span>1.4 mi round trip · Moderate · Best panoramic views of Lake Lure &amp; Hickory Nut Gorge</span>
+        </li>
+        <li>
+          <strong>Four Seasons Trail</strong>
+          <span>0.6 mi · Easy · Nature walk through forest canopy</span>
+        </li>
+        <li>
+          <strong>Skyline–Cliff Trail Loop</strong>
+          <span>0.4 mi · Easy · Connects Chimney top to Exclamation Point</span>
+        </li>
+      </ul>
+
+      <h3>Suggested Morning Schedule</h3>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-time">8:30 AM</div>
+          <div class="timeline-desc">Arrive at park entrance, buy tickets</div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-time">9:00 AM</div>
+          <div class="timeline-desc">Take elevator or stairs to Chimney summit viewpoint</div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-time">9:30 AM</div>
+          <div class="timeline-desc">Hike Skyline–Cliff Trail to Exclamation Point</div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-time">10:15 AM</div>
+          <div class="timeline-desc">Hike Hickory Nut Falls Trail to waterfall overlook</div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-time">11:30 AM</div>
+          <div class="timeline-desc">Walk Four Seasons Trail back toward parking</div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-time">12:00 PM</div>
+          <div class="timeline-desc">Lunch in Chimney Rock Village</div>
+        </div>
+      </div>
+
+      <div class="tip">
+        <strong>Tip:</strong> Arrive when the park opens at 8:30 AM to beat crowds. The elevator to the top saves energy for the trails. Wear sturdy shoes — Hickory Nut Falls Trail has rocky sections.
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ LOOKING GLASS FALLS ============ -->
+  <div class="hike-section" id="looking-glass">
+    <div class="hike-header">
+      <h2>Looking Glass Falls</h2>
+      <div class="subtitle">Afternoon Hike — Pisgah National Forest, Brevard, NC</div>
+    </div>
+    <div class="hike-body">
+
+      <h3>Trail Map</h3>
+      <div id="map-looking-glass" class="map-container"></div>
+
+      <h3>Falls Details</h3>
+      <div class="details-grid">
+        <div class="detail-card">
+          <div class="label">Location</div>
+          <div class="value">US-276, Pisgah Forest</div>
+        </div>
+        <div class="detail-card">
+          <div class="label">Waterfall Height</div>
+          <div class="value">60 feet</div>
+        </div>
+        <div class="detail-card">
+          <div class="label">Trail Distance</div>
+          <div class="value">~0.2 mi to base</div>
+        </div>
+        <div class="detail-card">
+          <div class="label">Admission</div>
+          <div class="value">Free</div>
+        </div>
+      </div>
+
+      <h3>What to Expect</h3>
+      <ul class="trail-list">
+        <li>
+          <strong>Falls Viewpoint (Roadside)</strong>
+          <span>Visible directly from the US-276 pull-off — great for photos</span>
+        </li>
+        <li>
+          <strong>Staircase to Base</strong>
+          <span>Short paved stairway (about 60 steps) descends to the base of the falls</span>
+        </li>
+        <li>
+          <strong>Wading Area</strong>
+          <span>Shallow pool at the base — kids can wade in warmer months (water is cold in March!)</span>
+        </li>
+      </ul>
+
+      <h3>Nearby Bonus Stops</h3>
+      <ul class="trail-list">
+        <li>
+          <strong>Sliding Rock</strong>
+          <span>7 min drive · Natural 60-ft rock waterslide (seasonal — may be closed in March)</span>
+        </li>
+        <li>
+          <strong>Brevard</strong>
+          <span>15 min drive · Charming downtown with shops, coffee, and ice cream</span>
+        </li>
+      </ul>
+
+      <h3>Suggested Afternoon Schedule</h3>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-time">1:30 PM</div>
+          <div class="timeline-desc">Depart Chimney Rock Village (~1 hr 15 min drive via US-64 W &amp; US-276)</div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-time">2:45 PM</div>
+          <div class="timeline-desc">Arrive at Looking Glass Falls pull-off</div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-time">2:50 PM</div>
+          <div class="timeline-desc">Walk down staircase to falls base, explore &amp; take photos</div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-time">3:30 PM</div>
+          <div class="timeline-desc">Optional: Drive to Sliding Rock for a quick look</div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-time">4:00 PM</div>
+          <div class="timeline-desc">Head to Brevard for snacks or continue to next destination</div>
+        </div>
+      </div>
+
+      <h3>Driving Route: Chimney Rock → Looking Glass Falls</h3>
+      <div id="map-route" class="map-container"></div>
+
+      <div class="tip">
+        <strong>Tip:</strong> Looking Glass Falls is a quick stop — plan 30–45 minutes. The drive from Chimney Rock is scenic through the mountains. March water levels are usually strong, making the falls impressive. Bring a jacket — the mist is cold!
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<div class="footer">
+  <p>AEB Digital Consulting — Family Road Trip Planner</p>
+</div>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script>
+(function() {
+  var tiles = 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
+  var attr = '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>';
+
+  // ---- Chimney Rock Map ----
+  var mapCR = L.map('map-chimney').setView([35.4390, -82.2468], 15);
+  L.tileLayer(tiles, { attribution: attr, maxZoom: 18 }).addTo(mapCR);
+
+  // Park entrance / ticket plaza
+  L.marker([35.4310, -82.2490]).addTo(mapCR)
+    .bindPopup('<strong>Park Entrance & Ticket Plaza</strong><br>431 Main St, Chimney Rock, NC');
+
+  // Chimney summit
+  L.marker([35.4375, -82.2465]).addTo(mapCR)
+    .bindPopup('<strong>The Chimney</strong><br>315-ft granite monolith<br>Elevator access available');
+
+  // Exclamation Point
+  L.marker([35.4405, -82.2440]).addTo(mapCR)
+    .bindPopup('<strong>Exclamation Point</strong><br>Highest publicly accessible point<br>Best panoramic views');
+
+  // Hickory Nut Falls
+  L.marker([35.4355, -82.2410]).addTo(mapCR)
+    .bindPopup('<strong>Hickory Nut Falls</strong><br>404-ft waterfall<br>One of the tallest east of the Mississippi');
+
+  // Trail lines
+  // Skyline-Cliff Trail (Chimney to Exclamation Point)
+  L.polyline([
+    [35.4375, -82.2465],
+    [35.4380, -82.2458],
+    [35.4388, -82.2450],
+    [35.4395, -82.2445],
+    [35.4405, -82.2440]
+  ], { color: '#e74c3c', weight: 4, opacity: 0.8, dashArray: '8,6' }).addTo(mapCR)
+    .bindPopup('Skyline–Cliff Trail Loop<br>0.4 mi · Easy');
+
+  // Hickory Nut Falls Trail
+  L.polyline([
+    [35.4375, -82.2465],
+    [35.4370, -82.2455],
+    [35.4365, -82.2440],
+    [35.4360, -82.2425],
+    [35.4355, -82.2410]
+  ], { color: '#2ecc71', weight: 4, opacity: 0.8, dashArray: '8,6' }).addTo(mapCR)
+    .bindPopup('Hickory Nut Falls Trail<br>1.4 mi round trip · Easy/Moderate');
+
+  // Four Seasons Trail
+  L.polyline([
+    [35.4375, -82.2465],
+    [35.4368, -82.2470],
+    [35.4358, -82.2478],
+    [35.4345, -82.2482],
+    [35.4335, -82.2485],
+    [35.4310, -82.2490]
+  ], { color: '#3498db', weight: 4, opacity: 0.8, dashArray: '8,6' }).addTo(mapCR)
+    .bindPopup('Four Seasons Trail<br>0.6 mi · Easy');
+
+  // Legend
+  var legendCR = L.control({ position: 'bottomright' });
+  legendCR.onAdd = function() {
+    var d = L.DomUtil.create('div');
+    d.style.cssText = 'background:#fff;padding:10px 14px;border-radius:8px;font-size:13px;line-height:1.8;box-shadow:0 2px 6px rgba(0,0,0,0.15)';
+    d.innerHTML = '<strong>Trails</strong><br>'
+      + '<span style="color:#e74c3c">━━</span> Skyline–Cliff<br>'
+      + '<span style="color:#2ecc71">━━</span> Hickory Nut Falls<br>'
+      + '<span style="color:#3498db">━━</span> Four Seasons';
+    return d;
+  };
+  legendCR.addTo(mapCR);
+
+  // ---- Looking Glass Falls Map ----
+  var mapLG = L.map('map-looking-glass').setView([35.2967, -82.7689], 16);
+  L.tileLayer(tiles, { attribution: attr, maxZoom: 18 }).addTo(mapLG);
+
+  L.marker([35.2967, -82.7689]).addTo(mapLG)
+    .bindPopup('<strong>Looking Glass Falls</strong><br>60-ft waterfall<br>US-276, Pisgah National Forest');
+
+  L.marker([35.2972, -82.7695]).addTo(mapLG)
+    .bindPopup('<strong>Parking Pull-off</strong><br>Roadside parking along US-276');
+
+  // Staircase path
+  L.polyline([
+    [35.2972, -82.7695],
+    [35.2970, -82.7692],
+    [35.2967, -82.7689]
+  ], { color: '#8e44ad', weight: 4, opacity: 0.8, dashArray: '6,4' }).addTo(mapLG)
+    .bindPopup('Staircase to Falls Base<br>~60 steps down');
+
+  // Sliding Rock marker
+  L.marker([35.2747, -82.7762]).addTo(mapLG)
+    .bindPopup('<strong>Sliding Rock</strong><br>Natural 60-ft rock waterslide<br>7 min drive from Looking Glass Falls');
+
+  mapLG.fitBounds([[35.2747, -82.7762], [35.2972, -82.7695]], { padding: [30, 30] });
+
+  // ---- Driving Route Map ----
+  var mapRoute = L.map('map-route').setView([35.38, -82.50], 10);
+  L.tileLayer(tiles, { attribution: attr, maxZoom: 18 }).addTo(mapRoute);
+
+  var routeCoords = [
+    [35.4310, -82.2490],  // Chimney Rock
+    [35.4280, -82.2700],
+    [35.4200, -82.3200],
+    [35.4150, -82.3800],
+    [35.4050, -82.4200],
+    [35.3900, -82.4600],
+    [35.3750, -82.5000],
+    [35.3600, -82.5500],
+    [35.3450, -82.5900],
+    [35.3300, -82.6300],
+    [35.3200, -82.6700],
+    [35.3100, -82.7100],
+    [35.3000, -82.7400],
+    [35.2967, -82.7689]   // Looking Glass Falls
+  ];
+
+  L.polyline(routeCoords, { color: '#1a73e8', weight: 4, opacity: 0.7 }).addTo(mapRoute);
+
+  // Start marker
+  L.marker([35.4310, -82.2490], {
+    icon: L.divIcon({
+      html: '<div style="background:#27ae60;color:#fff;padding:4px 8px;border-radius:4px;font-size:12px;font-weight:bold;white-space:nowrap">START</div>',
+      className: '', iconAnchor: [25, 10]
+    })
+  }).addTo(mapRoute).bindPopup('<strong>Chimney Rock</strong><br>Depart ~1:30 PM');
+
+  // End marker
+  L.marker([35.2967, -82.7689], {
+    icon: L.divIcon({
+      html: '<div style="background:#e74c3c;color:#fff;padding:4px 8px;border-radius:4px;font-size:12px;font-weight:bold;white-space:nowrap">END</div>',
+      className: '', iconAnchor: [18, 10]
+    })
+  }).addTo(mapRoute).bindPopup('<strong>Looking Glass Falls</strong><br>Arrive ~2:45 PM');
+
+  mapRoute.fitBounds(routeCoords, { padding: [40, 40] });
+
+})();
+</script>
+
+</body>
+</html>
