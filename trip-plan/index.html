@@ -53,6 +53,23 @@
 
   .tip { background: #fff8e1; border-left: 4px solid #f9a825; padding: 12px 16px; border-radius: 0 8px 8px 0; margin: 14px 0; font-size: 0.95em; }
 
+  /* Weather widget */
+  .weather-widget { margin: 14px 0; }
+  .weather-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+  .weather-card { border: 1px solid var(--border); border-radius: 10px; padding: 16px; background: #fff; }
+  .weather-card h4 { font-size: 0.95em; margin-bottom: 10px; color: #1a5276; }
+  .weather-card .wx-loading { color: var(--gray); font-size: 0.9em; }
+  .weather-card .wx-row { display: flex; justify-content: space-between; padding: 4px 0; font-size: 0.9em; }
+  .weather-card .wx-row .wx-label { color: var(--gray); }
+  .weather-card .wx-row .wx-val { font-weight: 600; }
+  .weather-card .wx-temp-big { font-size: 2em; font-weight: 700; color: var(--dark); margin: 6px 0; }
+  .weather-card .wx-desc { font-size: 0.85em; color: var(--gray); margin-top: 2px; }
+  .weather-card .wx-badge { display: inline-block; font-size: 0.75em; padding: 2px 8px; border-radius: 10px; margin-top: 6px; }
+  .wx-badge.actual { background: #e8f5e9; color: #2e7d32; }
+  .wx-badge.forecast { background: #e3f2fd; color: #1565c0; }
+  .wx-badge.error { background: #fce4ec; color: #c62828; }
+  @media (max-width: 600px) { .weather-cards { grid-template-columns: 1fr; } }
+
   .footer { text-align: center; padding: 30px; color: var(--gray); font-size: 0.85em; border-top: 1px solid var(--border); margin-top: 40px; }
 
   @media (max-width: 600px) {
@@ -111,6 +128,18 @@
         <div class="detail-card">
           <div class="label">Elevation</div>
           <div class="value">2,280 ft summit</div>
+        </div>
+      </div>
+
+      <h3>Weather</h3>
+      <div class="weather-cards">
+        <div class="weather-card" id="wx-chimney-morning">
+          <h4>Morning (8 AM – 12 PM)</h4>
+          <div class="wx-loading">Loading weather...</div>
+        </div>
+        <div class="weather-card" id="wx-chimney-afternoon">
+          <h4>Afternoon (12 PM – 2 PM)</h4>
+          <div class="wx-loading">Loading weather...</div>
         </div>
       </div>
 
@@ -196,6 +225,18 @@
         <div class="detail-card">
           <div class="label">Admission</div>
           <div class="value">Free</div>
+        </div>
+      </div>
+
+      <h3>Weather</h3>
+      <div class="weather-cards">
+        <div class="weather-card" id="wx-lg-afternoon">
+          <h4>Afternoon (2 PM – 5 PM)</h4>
+          <div class="wx-loading">Loading weather...</div>
+        </div>
+        <div class="weather-card" id="wx-lg-evening">
+          <h4>Evening (5 PM – 7 PM)</h4>
+          <div class="wx-loading">Loading weather...</div>
         </div>
       </div>
 
@@ -402,6 +443,125 @@
 
   mapRoute.fitBounds(routeCoords, { padding: [40, 40] });
 
+})();
+
+// ---- Weather via Open-Meteo (handles past dates via archive API, future via forecast API) ----
+(function() {
+  var TARGET_DATE = '2026-03-17';
+  var WMO_CODES = {
+    0:'Clear sky',1:'Mainly clear',2:'Partly cloudy',3:'Overcast',
+    45:'Foggy',48:'Rime fog',51:'Light drizzle',53:'Drizzle',55:'Heavy drizzle',
+    61:'Light rain',63:'Rain',65:'Heavy rain',66:'Freezing rain (light)',67:'Freezing rain',
+    71:'Light snow',73:'Snow',75:'Heavy snow',77:'Snow grains',
+    80:'Light showers',81:'Showers',82:'Heavy showers',
+    85:'Light snow showers',86:'Heavy snow showers',95:'Thunderstorm',
+    96:'Thunderstorm w/ hail',99:'Thunderstorm w/ heavy hail'
+  };
+
+  var locations = [
+    { lat: 35.439, lon: -82.247, name: 'Chimney Rock', cards: [
+      { id: 'wx-chimney-morning', hours: [8,9,10,11] },
+      { id: 'wx-chimney-afternoon', hours: [12,13] }
+    ]},
+    { lat: 35.297, lon: -82.769, name: 'Looking Glass Falls', cards: [
+      { id: 'wx-lg-afternoon', hours: [14,15,16] },
+      { id: 'wx-lg-evening', hours: [17,18] }
+    ]}
+  ];
+
+  function isPast(dateStr) {
+    var now = new Date();
+    var target = new Date(dateStr + 'T23:59:59');
+    return now > target;
+  }
+
+  function fetchWeather(loc) {
+    var past = isPast(TARGET_DATE);
+    var baseUrl = past
+      ? 'https://archive-api.open-meteo.com/v1/archive'
+      : 'https://api.open-meteo.com/v1/forecast';
+    var params = [
+      'latitude=' + loc.lat,
+      'longitude=' + loc.lon,
+      'hourly=temperature_2m,relative_humidity_2m,precipitation,weather_code,wind_speed_10m',
+      'temperature_unit=fahrenheit',
+      'wind_speed_unit=mph',
+      'precipitation_unit=inch',
+      'timezone=America/New_York',
+      'start_date=' + TARGET_DATE,
+      'end_date=' + TARGET_DATE
+    ];
+    var url = baseUrl + '?' + params.join('&');
+
+    fetch(url)
+      .then(function(r) { return r.json(); })
+      .then(function(data) {
+        if (data.error) throw new Error(data.reason || 'API error');
+        renderCards(loc, data.hourly, past);
+      })
+      .catch(function(err) {
+        loc.cards.forEach(function(c) {
+          var el = document.getElementById(c.id);
+          if (el) el.innerHTML = '<h4>' + el.querySelector('h4').textContent + '</h4>'
+            + '<span class="wx-badge error">Unavailable</span>'
+            + '<div class="wx-desc" style="margin-top:8px">' + err.message + '</div>';
+        });
+      });
+  }
+
+  function renderCards(loc, hourly, past) {
+    var times = hourly.time.map(function(t) { return new Date(t).getHours(); });
+
+    loc.cards.forEach(function(card) {
+      var el = document.getElementById(card.id);
+      if (!el) return;
+      var title = el.querySelector('h4').textContent;
+
+      // Find indices matching the requested hours
+      var indices = [];
+      times.forEach(function(h, i) {
+        if (card.hours.indexOf(h) !== -1) indices.push(i);
+      });
+
+      if (indices.length === 0) {
+        el.innerHTML = '<h4>' + title + '</h4><span class="wx-badge error">No data for these hours</span>';
+        return;
+      }
+
+      // Average/aggregate values
+      var temps = indices.map(function(i) { return hourly.temperature_2m[i]; });
+      var humidity = indices.map(function(i) { return hourly.relative_humidity_2m[i]; });
+      var precip = indices.map(function(i) { return hourly.precipitation[i]; });
+      var wind = indices.map(function(i) { return hourly.wind_speed_10m[i]; });
+      var codes = indices.map(function(i) { return hourly.weather_code[i]; });
+
+      var avgTemp = Math.round(temps.reduce(function(a,b){return a+b},0) / temps.length);
+      var highTemp = Math.round(Math.max.apply(null, temps));
+      var lowTemp = Math.round(Math.min.apply(null, temps));
+      var avgHumidity = Math.round(humidity.reduce(function(a,b){return a+b},0) / humidity.length);
+      var totalPrecip = precip.reduce(function(a,b){return a+b},0).toFixed(2);
+      var maxWind = Math.round(Math.max.apply(null, wind));
+      // Most common weather code
+      var codeCount = {};
+      codes.forEach(function(c) { codeCount[c] = (codeCount[c]||0) + 1; });
+      var dominantCode = Object.keys(codeCount).sort(function(a,b){ return codeCount[b]-codeCount[a]; })[0];
+      var desc = WMO_CODES[dominantCode] || 'Unknown';
+
+      var badgeClass = past ? 'actual' : 'forecast';
+      var badgeText = past ? 'Actual' : 'Forecast';
+
+      el.innerHTML = '<h4>' + title + '</h4>'
+        + '<span class="wx-badge ' + badgeClass + '">' + badgeText + '</span>'
+        + '<div class="wx-temp-big">' + avgTemp + '°F</div>'
+        + '<div class="wx-desc">' + desc + '</div>'
+        + '<div class="wx-row"><span class="wx-label">High / Low</span><span class="wx-val">' + highTemp + '° / ' + lowTemp + '°</span></div>'
+        + '<div class="wx-row"><span class="wx-label">Humidity</span><span class="wx-val">' + avgHumidity + '%</span></div>'
+        + '<div class="wx-row"><span class="wx-label">Precipitation</span><span class="wx-val">' + totalPrecip + ' in</span></div>'
+        + '<div class="wx-row"><span class="wx-label">Wind (max)</span><span class="wx-val">' + maxWind + ' mph</span></div>';
+    });
+  }
+
+  locations.forEach(fetchWeather);
 })();
 </script>
 
