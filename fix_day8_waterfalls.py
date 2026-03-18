@@ -20,8 +20,8 @@ def write_html(content):
     with open(HTML_FILE, "w", encoding="utf-8") as f:
         f.write(content)
 
-NEW_DAY8 = """<h2 id="day-8">Day 8 &mdash; Wednesday, March 18th: Pisgah Waterfall Trail + BRP + DuPont + Brevard</h2>
-<p style="margin:-8px 0 12px 0;font-size:0.95em;color:#666;font-style:italic;font-family:Fraunces,serif;">&#127786;&#65039; Up to 7 waterfalls &bull; Blue Ridge Parkway scenic drive &bull; O.P. Taylor&rsquo;s Toy Store &bull; Downtown Brevard</p>
+NEW_DAY8 = """<h2 id="day-8">Day 8 &mdash; Wednesday, March 18th: Pisgah Waterfall Trail + BRP + DuPont + Brevard + The Marquee</h2>
+<p style="margin:-8px 0 12px 0;font-size:0.95em;color:#666;font-style:italic;font-family:Fraunces,serif;">&#127786;&#65039; Up to 7 waterfalls &bull; Blue Ridge Parkway scenic drive &bull; O.P. Taylor&rsquo;s Toy Store &bull; Downtown Brevard &bull; The Marquee (River Arts District) &bull; Late dinner in Asheville</p>
 
 <p><strong>&#128205; Route &amp; Distances:</strong> <a href="https://www.google.com/maps/dir/35.612841,-82.665031/Looking+Glass+Falls,+Pisgah+Forest,+NC/Moore+Cove+Falls+Trail,+NC/Sliding+Rock,+Pisgah+Forest,+NC/35.3480,-82.6980/Hooker+Falls,+DuPont+State+Recreational+Forest,+NC/O.P.+Taylor's,+16+S+Broad+St,+Brevard,+NC/35.612841,-82.665031" target="_blank" rel="noopener noreferrer">Day 8 Google Map</a> (includes BRP scenic section + O.P. Taylor&rsquo;s)</p>
 
@@ -34,8 +34,9 @@ NEW_DAY8 = """<h2 id="day-8">Day 8 &mdash; Wednesday, March 18th: Pisgah Waterfa
 <tr><td>4</td><td>BRP (MP 417) &rarr; <a href="https://www.dupontstaterecreationalforest.com/" target="_blank" rel="noopener noreferrer">DuPont</a> &mdash; Hooker Falls lot (Staton Rd)</td><td>~25 mi</td><td>~35 min</td><td>Return BRP to US-276 S &rarr; US-64 E &rarr; Staton Rd to Hooker Falls parking</td></tr>
 <tr><td>5</td><td>Hooker Falls lot &rarr; High Falls lot (Cascade Lake Rd)</td><td>~2 mi</td><td>~5 min</td><td>Right on Staton Rd &rarr; right on Cascade Lake Rd &mdash; <strong>closer parking for Triple + High Falls</strong></td></tr>
 <tr><td>6</td><td>High Falls lot &rarr; <a href="https://www.optaylors.com/" target="_blank" rel="noopener noreferrer">O.P. Taylor&rsquo;s</a> / Downtown Brevard</td><td>~10 mi</td><td>~15 min</td><td>Cascade Lake Rd &rarr; US-64 W &rarr; S Broad St</td></tr>
-<tr><td>7</td><td>Brevard &rarr; Candler rental</td><td>~40 mi</td><td>~45 min</td><td>US-276 N &rarr; NC-280 W &rarr; I-26 W</td></tr>
-<tr><td></td><td><strong>Day 8 Total</strong></td><td><strong>~133 mi</strong></td><td><strong>~3 hr driving</strong></td><td><em>Each waterfall has its own nearby parking &mdash; minimal hiking, maximum waterfalls!</em></td></tr>
+<tr><td>7</td><td>Brevard &rarr; <a href="https://marqueeasheville.com/" target="_blank" rel="noopener noreferrer">The Marquee</a> (36 Foundry St, Asheville)</td><td>~40 mi</td><td>~40 min</td><td>US-276 N &rarr; NC-280 W &rarr; I-26 W &rarr; Exit 31 (Amboy Rd) to River Arts District</td></tr>
+<tr><td>8</td><td>Late dinner in Asheville &rarr; Candler rental</td><td>~10 mi</td><td>~15 min</td><td>Dozens of restaurants within minutes of the River Arts District &rarr; I-40 W to cabin</td></tr>
+<tr><td></td><td><strong>Day 8 Total</strong></td><td><strong>~143 mi</strong></td><td><strong>~3 hr 25 min driving</strong></td><td><em>Waterfalls + BRP + toy store + The Marquee + Asheville dinner &mdash; full day!</em></td></tr>
 </tbody>
 </table>
 
@@ -116,6 +117,21 @@ NEW_DAY8 = """<h2 id="day-8">Day 8 &mdash; Wednesday, March 18th: Pisgah Waterfa
 <li><strong>Lunch options:</strong> The Square Root (creative sandwiches &amp; salads), Rocky&rsquo;s Grill (burgers &amp; comfort food), Mayberry&rsquo;s (classic diner), or grab pizza and eat by the courthouse lawn.</li>
 </ul>
 
+<h3>Part 5 &mdash; The Marquee + Late Dinner in Asheville</h3>
+
+<p>Instead of heading straight to the cabin from Brevard, take the same route north (US-276 &rarr; NC-280 &rarr; I-26) but exit into Asheville&rsquo;s <strong>River Arts District</strong> for The Marquee and dinner.</p>
+
+<ul>
+<li><strong><a href="https://marqueeasheville.com/" target="_blank" rel="noopener noreferrer">The Marquee</a></strong> &mdash; 36 Foundry St &mdash; A massive 50,000 sq ft curated indoor marketplace in a converted warehouse. <strong>145+ vendors</strong> selling art, antiques, vintage decor, jewelry, crafts, home goods, clothing, and more. European street market meets Asheville creativity. Bar on-site with drinks and snacks. Dog-friendly. <strong>Open daily 11 AM&ndash;6 PM.</strong></li>
+<li><strong>Late dinner in Asheville</strong> &mdash; The River Arts District and downtown Asheville have endless options. A few family-friendly picks:
+<ul>
+<li><strong>12 Bones Smokehouse</strong> (South Slope) &mdash; Legendary Asheville BBQ, ribs &amp; smoked meats. Casual counter-service.</li>
+<li><strong>Biscuit Head</strong> (multiple locations) &mdash; Southern comfort food, massive cat-head biscuits. Open late.</li>
+<li><strong>Twisted Laurel</strong> (downtown) &mdash; Wood-fired pizza, craft cocktails. Family-friendly patio.</li>
+<li><strong>White Duck Taco Shop</strong> (River Arts District) &mdash; Creative tacos, right near The Marquee. Quick, easy, kid-approved.</li>
+</ul></li>
+</ul>
+
 <h3>Full Day Timeline</h3>
 <ul>
 <li><strong>8:30 AM</strong> &mdash; Depart cabin (~45 min drive to Looking Glass Falls via I-26 E &rarr; NC-280 &rarr; US-276 N)</li>
@@ -135,19 +151,23 @@ NEW_DAY8 = """<h2 id="day-8">Day 8 &mdash; Wednesday, March 18th: Pisgah Waterfa
 <li><strong>2:05 PM</strong> &mdash; <strong>Lunch in downtown Brevard</strong> &mdash; restaurants, cafes, and the &ldquo;Land of Waterfalls&rdquo; vibe</li>
 <li><strong>2:45 PM</strong> &mdash; <strong>O.P. Taylor&rsquo;s Toy Store</strong> (16 S Broad St) &mdash; legendary toy store, Ethan will love this!</li>
 <li><strong>3:15 PM</strong> &mdash; Walk downtown &mdash; browse shops, grab ice cream, look for the <strong>white squirrels</strong></li>
-<li><strong>3:45 PM</strong> &mdash; Head back to cabin (~45 min via US-276 N &rarr; NC-280 &rarr; I-26 W)</li>
-<li><strong>4:30 PM</strong> &mdash; Back at the cabin &mdash; earlier return thanks to the two-lot parking strategy!</li>
+<li><strong>3:45 PM</strong> &mdash; Leave Brevard, head north toward Asheville (~40 min via US-276 N &rarr; NC-280 &rarr; I-26)</li>
+<li><strong>4:30 PM</strong> &mdash; Arrive at <strong>The Marquee</strong> (36 Foundry St, River Arts District) &mdash; 50,000 sq ft indoor marketplace, 145+ vendors. Browse art, antiques, vintage finds, crafts. Bar on-site. Closes at 6 PM.</li>
+<li><strong>5:15&ndash;6:00 PM</strong> &mdash; Browse The Marquee (30&ndash;45 min)</li>
+<li><strong>6:00 PM</strong> &mdash; <strong>Late dinner in Asheville</strong> &mdash; White Duck Taco (right in RAD), 12 Bones Smokehouse, Biscuit Head, Twisted Laurel, or your pick</li>
+<li><strong>7:00&ndash;7:15 PM</strong> &mdash; Head to cabin (~15 min from Asheville via I-40 W)</li>
+<li><strong>7:30 PM</strong> &mdash; Back at the cabin</li>
 </ul>
 
 <p><strong>Recommended combos based on energy:</strong></p>
 <ul>
-<li><strong>Easy (tired kid):</strong> Looking Glass Falls (steps only) &rarr; Sliding Rock (steps only) &rarr; BRP scenic drive &rarr; Hooker Falls (0.4 mi RT, flat) &rarr; Brevard + O.P. Taylor&rsquo;s &rarr; home by 2 PM. <em>Total hiking: under 1 mile.</em></li>
-<li><strong>Moderate (good energy):</strong> Looking Glass &rarr; Moore Cove (1.2 mi RT, flat) &rarr; Sliding Rock &rarr; BRP drive &rarr; Hooker Falls (lot A) &rarr; Triple Falls (lot B, 1 mi RT) &rarr; Brevard + O.P. Taylor&rsquo;s &rarr; home by 4 PM. <em>Total hiking: ~2.6 mi.</em></li>
-<li><strong>Full send (everyone fired up):</strong> All Pisgah falls &rarr; BRP + Skinny Dip Falls &rarr; All DuPont falls from both lots &rarr; Brevard + O.P. Taylor&rsquo;s &rarr; home by 4:30 PM. <em>Total hiking: ~4.2 mi.</em></li>
+<li><strong>Easy (tired kid):</strong> Looking Glass Falls (steps only) &rarr; Sliding Rock (steps only) &rarr; BRP scenic drive &rarr; Hooker Falls (0.4 mi RT, flat) &rarr; Brevard + O.P. Taylor&rsquo;s &rarr; The Marquee + dinner. <em>Total hiking: under 1 mile.</em></li>
+<li><strong>Moderate (good energy):</strong> Looking Glass &rarr; Moore Cove (1.2 mi RT, flat) &rarr; Sliding Rock &rarr; BRP drive &rarr; Hooker Falls (lot A) &rarr; Triple Falls (lot B, 1 mi RT) &rarr; Brevard + O.P. Taylor&rsquo;s &rarr; The Marquee + dinner. <em>Total hiking: ~2.6 mi.</em></li>
+<li><strong>Full send (everyone fired up):</strong> All Pisgah falls &rarr; BRP + Skinny Dip Falls &rarr; All DuPont falls from both lots &rarr; Brevard + O.P. Taylor&rsquo;s &rarr; The Marquee + dinner. <em>Total hiking: ~4.2 mi.</em></li>
 </ul>
 
 <div class="tip" style="background:#fff8e1;border-left:4px solid #f9a825;padding:12px 16px;border-radius:0 8px 8px 0;margin:14px 0;font-size:0.95em;">
-<strong>Scouting note:</strong> The US-276 corridor through Pisgah National Forest is everyone&rsquo;s backyard playground. Notice how close world-class waterfalls and the Blue Ridge Parkway are to Asheville. DuPont&rsquo;s Triple Falls from <em>The Hunger Games</em> and Brevard&rsquo;s walkable downtown with O.P. Taylor&rsquo;s show exactly the kind of family-friendly lifestyle this area offers.
+<strong>Scouting note:</strong> The US-276 corridor through Pisgah National Forest is everyone&rsquo;s backyard playground. Notice how close world-class waterfalls and the Blue Ridge Parkway are to Asheville. DuPont&rsquo;s Triple Falls from <em>The Hunger Games</em>, Brevard&rsquo;s walkable downtown with O.P. Taylor&rsquo;s, and Asheville&rsquo;s River Arts District (The Marquee, restaurants, creativity everywhere) show exactly the kind of family-friendly lifestyle this area offers.
 </div>
 
 """
@@ -189,8 +209,11 @@ def main():
     print("  2:05 PM   - Lunch in Brevard")
     print("  2:45 PM   - O.P. Taylor's Toy Store!")
     print("  3:15 PM   - Walk downtown, white squirrels, ice cream")
-    print("  3:45 PM   - Head to cabin")
-    print("  4:30 PM   - Back at cabin (earlier thanks to 2-lot parking!)")
+    print("  3:45 PM   - Leave Brevard -> Asheville (~40 min)")
+    print("  4:30 PM   - The Marquee (36 Foundry St, River Arts District)")
+    print("  6:00 PM   - Late dinner in Asheville")
+    print("  7:15 PM   - Head to cabin (~15 min)")
+    print("  7:30 PM   - Back at cabin")
     print("")
     print("BRP Status: OPEN (MP 382-420, confirmed after Helene repair)")
     print("Check morning-of: https://www.nps.gov/blri/planyourvisit/roadclosures.htm")
