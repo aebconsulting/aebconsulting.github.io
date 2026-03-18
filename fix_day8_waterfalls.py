@@ -31,10 +31,11 @@ NEW_DAY8 = """<h2 id="day-8">Day 8 &mdash; Wednesday, March 18th: Pisgah Waterfa
 <tr><td>1</td><td>Candler rental &rarr; <a href="https://www.fs.usda.gov/recarea/nfsnc/recarea/?recid=48624" target="_blank" rel="noopener noreferrer">Looking Glass Falls</a></td><td>~40 mi</td><td>~45 min</td><td>I-26 E &rarr; NC-280 E &rarr; US-276 N into Pisgah NF</td></tr>
 <tr><td>2</td><td>Looking Glass Falls &rarr; Moore Cove Falls &rarr; <a href="https://www.fs.usda.gov/recarea/nfsnc/recarea/?recid=48965" target="_blank" rel="noopener noreferrer">Sliding Rock</a></td><td>~4 mi</td><td>~10 min</td><td>Continue north on US-276 &mdash; all sequential, no backtracking</td></tr>
 <tr><td>3</td><td>Sliding Rock &rarr; <strong>Blue Ridge Parkway</strong> (MP 411.8&ndash;417)</td><td>~12 mi</td><td>~20 min</td><td>US-276 N to BRP junction at MP 411.8, drive south to MP 417</td></tr>
-<tr><td>4</td><td>BRP (MP 417) &rarr; <a href="https://www.dupontstaterecreationalforest.com/" target="_blank" rel="noopener noreferrer">DuPont State Forest</a> (Hooker Falls lot)</td><td>~25 mi</td><td>~35 min</td><td>Return BRP to US-276 S &rarr; US-64 E &rarr; Staton Rd to Hooker Falls parking</td></tr>
-<tr><td>5</td><td>DuPont &rarr; <a href="https://www.optaylors.com/" target="_blank" rel="noopener noreferrer">O.P. Taylor&rsquo;s</a> / Downtown Brevard</td><td>~10 mi</td><td>~15 min</td><td>Staton Rd &rarr; US-64 W &rarr; S Broad St</td></tr>
-<tr><td>6</td><td>Brevard &rarr; Candler rental</td><td>~40 mi</td><td>~45 min</td><td>US-276 N &rarr; NC-280 W &rarr; I-26 W</td></tr>
-<tr><td></td><td><strong>Day 8 Total</strong></td><td><strong>~131 mi</strong></td><td><strong>~2 hr 50 min driving</strong></td><td><em>Waterfalls are sequential on US-276 &mdash; BRP + DuPont + Brevard all on the loop!</em></td></tr>
+<tr><td>4</td><td>BRP (MP 417) &rarr; <a href="https://www.dupontstaterecreationalforest.com/" target="_blank" rel="noopener noreferrer">DuPont</a> &mdash; Hooker Falls lot (Staton Rd)</td><td>~25 mi</td><td>~35 min</td><td>Return BRP to US-276 S &rarr; US-64 E &rarr; Staton Rd to Hooker Falls parking</td></tr>
+<tr><td>5</td><td>Hooker Falls lot &rarr; High Falls lot (Cascade Lake Rd)</td><td>~2 mi</td><td>~5 min</td><td>Right on Staton Rd &rarr; right on Cascade Lake Rd &mdash; <strong>closer parking for Triple + High Falls</strong></td></tr>
+<tr><td>6</td><td>High Falls lot &rarr; <a href="https://www.optaylors.com/" target="_blank" rel="noopener noreferrer">O.P. Taylor&rsquo;s</a> / Downtown Brevard</td><td>~10 mi</td><td>~15 min</td><td>Cascade Lake Rd &rarr; US-64 W &rarr; S Broad St</td></tr>
+<tr><td>7</td><td>Brevard &rarr; Candler rental</td><td>~40 mi</td><td>~45 min</td><td>US-276 N &rarr; NC-280 W &rarr; I-26 W</td></tr>
+<tr><td></td><td><strong>Day 8 Total</strong></td><td><strong>~133 mi</strong></td><td><strong>~3 hr driving</strong></td><td><em>Each waterfall has its own nearby parking &mdash; minimal hiking, maximum waterfalls!</em></td></tr>
 </tbody>
 </table>
 
@@ -48,14 +49,14 @@ NEW_DAY8 = """<h2 id="day-8">Day 8 &mdash; Wednesday, March 18th: Pisgah Waterfa
 
 <h3>Part 1 &mdash; Pisgah National Forest Waterfalls (US-276)</h3>
 
-<p>All three waterfalls are <strong>sequential along US-276 heading north</strong> through Pisgah National Forest &mdash; zero backtracking. After Monday&rsquo;s storms, water flow will be roaring!</p>
+<p>All three waterfalls are <strong>sequential along US-276 heading north</strong> through Pisgah National Forest &mdash; zero backtracking. Each has its own parking right on US-276. After Monday&rsquo;s storms, water flow will be roaring!</p>
 
 <table>
-<thead><tr><th>#</th><th>Waterfall</th><th>Distance</th><th>Difficulty</th><th>Time Needed</th><th>Highlight</th></tr></thead>
+<thead><tr><th>#</th><th>Waterfall</th><th>Walk from Car</th><th>Difficulty</th><th>Time Needed</th><th>Parking &amp; Details</th></tr></thead>
 <tbody>
-<tr><td>1</td><td><strong><a href="https://www.fs.usda.gov/recarea/nfsnc/recarea/?recid=48624" target="_blank" rel="noopener noreferrer">Looking Glass Falls</a></strong></td><td>Roadside (steps only)</td><td>Easy</td><td>15&ndash;20 min</td><td>60-ft waterfall right off US-276. Walk down ~60 steps to the base. Start here always. FREE.</td></tr>
-<tr><td>2</td><td><strong><a href="https://www.alltrails.com/trail/us/north-carolina/moore-cove-falls-trail" target="_blank" rel="noopener noreferrer">Moore Cove Falls</a></strong></td><td>1.2 mi RT</td><td>Easy</td><td>30&ndash;45 min</td><td>Walk <strong>BEHIND</strong> a 50-ft waterfall through lush forest! Kid favorite &mdash; magical experience.</td></tr>
-<tr><td>3</td><td><strong><a href="https://www.fs.usda.gov/recarea/nfsnc/recarea/?recid=48965" target="_blank" rel="noopener noreferrer">Sliding Rock</a></strong></td><td>Roadside</td><td>Easy</td><td>10&ndash;15 min</td><td>Natural 60-ft rock waterslide, 11,000 gal/min. Too cold to slide in March but amazing to watch.</td></tr>
+<tr><td>1</td><td><strong><a href="https://www.fs.usda.gov/recarea/nfsnc/recarea/?recid=48624" target="_blank" rel="noopener noreferrer">Looking Glass Falls</a></strong></td><td>~60 steps down</td><td>Easy</td><td>15&ndash;20 min</td><td>&#127359;&#65039; <strong>Pull-off lot right on US-276</strong> (right side heading north). Paved. 60-ft waterfall visible from the road! Walk down stone steps to the base. FREE.</td></tr>
+<tr><td>2</td><td><strong><a href="https://www.alltrails.com/trail/us/north-carolina/moore-cove-falls-trail" target="_blank" rel="noopener noreferrer">Moore Cove Falls</a></strong></td><td>1.2 mi RT (flat)</td><td>Easy</td><td>30&ndash;45 min</td><td>&#127359;&#65039; <strong>Gravel lot on US-276</strong>, 0.7 mi past Looking Glass Falls on the right. Trail is flat, mostly creekside, well-maintained. Walk <strong>BEHIND</strong> a 50-ft waterfall! Kid favorite.</td></tr>
+<tr><td>3</td><td><strong><a href="https://www.fs.usda.gov/recarea/nfsnc/recarea/?recid=48965" target="_blank" rel="noopener noreferrer">Sliding Rock</a></strong></td><td>Steps to platform</td><td>Easy</td><td>10&ndash;15 min</td><td>&#127359;&#65039; <strong>Paved parking lot at Sliding Rock</strong>, 2.5 mi past Moore Cove on US-276. Walk down steps to the observation platform. Natural 60-ft rock waterslide, 11,000 gal/min. Too cold in March but amazing to watch.</td></tr>
 </tbody>
 </table>
 
@@ -71,21 +72,38 @@ NEW_DAY8 = """<h2 id="day-8">Day 8 &mdash; Wednesday, March 18th: Pisgah Waterfa
 
 <p><em>BRP speed limit is 45 mph max; expect 30&ndash;35 mph on curves. After MP 417, return north on BRP to US-276 and head south toward DuPont.</em></p>
 
-<h3>Part 3 &mdash; DuPont State Forest Waterfalls</h3>
+<h3>Part 3 &mdash; DuPont State Forest Waterfalls (2 parking lots = shorter hikes!)</h3>
 
-<p>DuPont has three major waterfalls on the Little River, all accessible from the <strong>Hooker Falls parking area</strong>. Moderate hiking on well-maintained trails.</p>
+<p><strong>Strategy:</strong> DuPont has multiple access points. Instead of one long out-and-back, we use <strong>two parking lots</strong> to cut total hiking nearly in half:</p>
+<ol>
+<li><strong>Stop A &mdash; Hooker Falls Access</strong> (Staton Rd) &rarr; quick 0.4 mi RT to Hooker Falls</li>
+<li>Drive 5 min to <strong>Stop B &mdash; High Falls Access</strong> (Cascade Lake Rd) &rarr; short 1.6 mi RT loop to Triple Falls + High Falls</li>
+</ol>
+<p><em>Total DuPont hiking: ~2.0 mi (vs. 3.9 mi if you parked only at Hooker Falls).</em></p>
+
+<h4>Stop A &mdash; Hooker Falls Access Parking (Staton Rd)</h4>
+<p>&#127359;&#65039; <strong>Hooker Falls parking lot</strong> &mdash; <a href="https://www.google.com/maps/place/35.1938,-82.6175" target="_blank" rel="noopener noreferrer">GPS: 35.1938, -82.6175</a> &mdash; Turn onto Staton Rd from US-64, follow signs. Paved lot with restrooms.</p>
 
 <table>
-<thead><tr><th>#</th><th>Waterfall</th><th>Distance</th><th>Difficulty</th><th>Time Needed</th><th>Highlight</th></tr></thead>
+<thead><tr><th>#</th><th>Waterfall</th><th>Walk from Car</th><th>Difficulty</th><th>Time Needed</th><th>Details</th></tr></thead>
 <tbody>
-<tr><td>4</td><td><strong><a href="https://www.dupontstaterecreationalforest.com/waterfalls/hooker-falls" target="_blank" rel="noopener noreferrer">Hooker Falls</a></strong></td><td>0.5 mi RT</td><td>Easy</td><td>15 min</td><td>Wide, powerful 12-ft curtain waterfall. Shortest walk from the parking lot. Great warm-up.</td></tr>
-<tr><td>5</td><td><strong>Triple Falls</strong></td><td>1.4 mi from Hooker</td><td>Moderate</td><td>45 min</td><td>Three cascading drops, 120 ft total. Featured in <em>The Hunger Games</em> &amp; <em>The Last of the Mohicans</em>. THE must-see.</td></tr>
-<tr><td>6</td><td><strong>High Falls</strong></td><td>0.3 mi past Triple</td><td>Moderate</td><td>20 min</td><td>150-ft dramatic plunge over a cliff &mdash; tallest in DuPont. Viewing platform with railing.</td></tr>
-<tr><td>7</td><td><strong>Bridal Veil Falls</strong> &#9200;</td><td>0.6 mi past High</td><td>Moderate</td><td>30 min</td><td>120-ft wispy falls. <strong>Only if time &amp; energy.</strong> Beautiful but not essential.</td></tr>
+<tr><td>4</td><td><strong><a href="https://www.dupontstaterecreationalforest.com/waterfalls/hooker-falls" target="_blank" rel="noopener noreferrer">Hooker Falls</a></strong></td><td>0.4 mi RT</td><td>Easy &mdash; flat, wide gravel path</td><td>15 min</td><td>Wide, powerful 12-ft curtain waterfall. Shortest walk of any DuPont falls. Great warm-up.</td></tr>
 </tbody>
 </table>
 
-<p><em>The trail from Hooker Falls &rarr; Triple Falls &rarr; High Falls is a <strong>3.2 mi out-and-back</strong> along the Little River. Well-maintained, moderate difficulty. Triple Falls alone is worth the trip.</em></p>
+<h4>Stop B &mdash; High Falls Access Parking (Cascade Lake Rd) &mdash; 5 min drive from Stop A</h4>
+<p>&#127359;&#65039; <strong>High Falls trailhead parking</strong> &mdash; <a href="https://www.google.com/maps/place/35.1830,-82.6280" target="_blank" rel="noopener noreferrer">GPS: 35.1830, -82.6280</a> &mdash; From Hooker Falls lot, turn right on Staton Rd, right on Cascade Lake Rd, lot is ~1.5 mi on the left. Gravel lot.</p>
+
+<table>
+<thead><tr><th>#</th><th>Waterfall</th><th>Walk from Car</th><th>Difficulty</th><th>Time Needed</th><th>Details</th></tr></thead>
+<tbody>
+<tr><td>5</td><td><strong>Triple Falls</strong></td><td>~0.5 mi one way</td><td>Easy-moderate &mdash; wide trail, gentle grade</td><td>30&ndash;40 min</td><td>Three cascading drops, 120 ft total. Featured in <em>The Hunger Games</em> &amp; <em>The Last of the Mohicans</em>. THE must-see. Multiple viewing platforms.</td></tr>
+<tr><td>6</td><td><strong>High Falls</strong></td><td>~0.3 mi past Triple</td><td>Easy-moderate &mdash; continue on same trail</td><td>20 min</td><td>150-ft dramatic plunge over a cliff &mdash; tallest in DuPont. Viewing platform with railing. Just 0.3 mi past Triple Falls.</td></tr>
+<tr><td>7</td><td><strong>Bridal Veil Falls</strong> &#9200;</td><td>~0.3 mi past High</td><td>Moderate</td><td>20 min</td><td>120-ft wispy falls. <strong>Only if time &amp; energy.</strong> Beautiful but adds 0.6 mi RT.</td></tr>
+</tbody>
+</table>
+
+<p><em>From the High Falls Access lot, it&rsquo;s a <strong>~1.6 mi out-and-back</strong> to see both Triple Falls and High Falls. Much easier than hiking from Hooker Falls. Trail is wide, mostly flat, well-maintained.</em></p>
 
 <h3>Part 4 &mdash; Downtown Brevard</h3>
 
@@ -107,24 +125,25 @@ NEW_DAY8 = """<h2 id="day-8">Day 8 &mdash; Wednesday, March 18th: Pisgah Waterfa
 <li><strong>10:50 AM</strong> &mdash; <strong>Blue Ridge Parkway scenic drive</strong> &mdash; US-276 N to BRP at MP 411.8, drive south to MP 417. Mountain ridge panoramas, snow-dusted peaks (20&ndash;30 min)</li>
 <li><strong>11:15 AM</strong> &mdash; <strong>Looking Glass Rock Overlook</strong> (MP 417) &mdash; iconic granite dome view. Optional: <strong>Skinny Dip Falls</strong> (1 mi RT, 30&ndash;45 min)</li>
 <li><strong>11:30 AM</strong> &mdash; Return to US-276, drive south to DuPont (~35 min via US-276 S &rarr; US-64 E)</li>
-<li><strong>12:00 PM</strong> &mdash; Arrive at DuPont &mdash; Hooker Falls parking area</li>
-<li><strong>12:10 PM</strong> &mdash; <strong>Hooker Falls</strong> &mdash; quick 0.5 mi walk (15 min)</li>
-<li><strong>12:30 PM</strong> &mdash; <strong>Triple Falls</strong> &mdash; 1.4 mi hike from Hooker Falls, multiple viewing platforms (45 min)</li>
-<li><strong>1:15 PM</strong> &mdash; <strong>High Falls</strong> &mdash; 0.3 mi past Triple Falls, tallest in DuPont (20 min)</li>
-<li><strong>1:45 PM</strong> &mdash; Hike back to parking (~1.7 mi, 35&ndash;40 min)</li>
-<li><strong>2:30 PM</strong> &mdash; Drive to downtown Brevard (~15 min)</li>
-<li><strong>2:45 PM</strong> &mdash; <strong>Lunch in downtown Brevard</strong> &mdash; restaurants, cafes, and the &ldquo;Land of Waterfalls&rdquo; vibe</li>
-<li><strong>3:15 PM</strong> &mdash; <strong>O.P. Taylor&rsquo;s Toy Store</strong> (16 S Broad St) &mdash; legendary toy store, Ethan will love this!</li>
-<li><strong>3:45 PM</strong> &mdash; Walk downtown &mdash; browse shops, grab ice cream, look for the <strong>white squirrels</strong></li>
-<li><strong>4:15 PM</strong> &mdash; Head back to cabin (~45 min via US-276 N &rarr; NC-280 &rarr; I-26 W)</li>
-<li><strong>5:00 PM</strong> &mdash; Back at the cabin &mdash; evening to relax</li>
+<li><strong>12:00 PM</strong> &mdash; Arrive at DuPont &mdash; <strong>Hooker Falls parking lot</strong> (Staton Rd, paved, restrooms)</li>
+<li><strong>12:05 PM</strong> &mdash; <strong>Hooker Falls</strong> &mdash; 0.4 mi RT, flat gravel path, quick and easy (15 min)</li>
+<li><strong>12:20 PM</strong> &mdash; Drive 5 min to <strong>High Falls Access parking</strong> (Cascade Lake Rd) &mdash; closer lot for Triple + High Falls</li>
+<li><strong>12:30 PM</strong> &mdash; <strong>Triple Falls</strong> &mdash; 0.5 mi from this lot, wide easy trail (30&ndash;40 min)</li>
+<li><strong>1:10 PM</strong> &mdash; <strong>High Falls</strong> &mdash; 0.3 mi past Triple Falls, tallest in DuPont (20 min)</li>
+<li><strong>1:30 PM</strong> &mdash; Hike back to High Falls lot (~0.8 mi, 15&ndash;20 min)</li>
+<li><strong>1:50 PM</strong> &mdash; Drive to downtown Brevard (~15 min from High Falls lot)</li>
+<li><strong>2:05 PM</strong> &mdash; <strong>Lunch in downtown Brevard</strong> &mdash; restaurants, cafes, and the &ldquo;Land of Waterfalls&rdquo; vibe</li>
+<li><strong>2:45 PM</strong> &mdash; <strong>O.P. Taylor&rsquo;s Toy Store</strong> (16 S Broad St) &mdash; legendary toy store, Ethan will love this!</li>
+<li><strong>3:15 PM</strong> &mdash; Walk downtown &mdash; browse shops, grab ice cream, look for the <strong>white squirrels</strong></li>
+<li><strong>3:45 PM</strong> &mdash; Head back to cabin (~45 min via US-276 N &rarr; NC-280 &rarr; I-26 W)</li>
+<li><strong>4:30 PM</strong> &mdash; Back at the cabin &mdash; earlier return thanks to the two-lot parking strategy!</li>
 </ul>
 
 <p><strong>Recommended combos based on energy:</strong></p>
 <ul>
-<li><strong>Easy (tired kid):</strong> Looking Glass Falls (roadside) &rarr; Sliding Rock (roadside) &rarr; BRP scenic drive &rarr; Hooker Falls (0.5 mi) &rarr; Brevard + O.P. Taylor&rsquo;s &rarr; home by 2 PM</li>
-<li><strong>Moderate (good energy):</strong> Looking Glass &rarr; Moore Cove &rarr; Sliding Rock &rarr; BRP drive &rarr; Hooker Falls &rarr; Triple Falls &rarr; Brevard + O.P. Taylor&rsquo;s &rarr; home by 4 PM</li>
-<li><strong>Full send (everyone fired up):</strong> All Pisgah falls &rarr; BRP + Skinny Dip Falls &rarr; All DuPont falls &rarr; Brevard + O.P. Taylor&rsquo;s &rarr; home by 5 PM</li>
+<li><strong>Easy (tired kid):</strong> Looking Glass Falls (steps only) &rarr; Sliding Rock (steps only) &rarr; BRP scenic drive &rarr; Hooker Falls (0.4 mi RT, flat) &rarr; Brevard + O.P. Taylor&rsquo;s &rarr; home by 2 PM. <em>Total hiking: under 1 mile.</em></li>
+<li><strong>Moderate (good energy):</strong> Looking Glass &rarr; Moore Cove (1.2 mi RT, flat) &rarr; Sliding Rock &rarr; BRP drive &rarr; Hooker Falls (lot A) &rarr; Triple Falls (lot B, 1 mi RT) &rarr; Brevard + O.P. Taylor&rsquo;s &rarr; home by 4 PM. <em>Total hiking: ~2.6 mi.</em></li>
+<li><strong>Full send (everyone fired up):</strong> All Pisgah falls &rarr; BRP + Skinny Dip Falls &rarr; All DuPont falls from both lots &rarr; Brevard + O.P. Taylor&rsquo;s &rarr; home by 4:30 PM. <em>Total hiking: ~4.2 mi.</em></li>
 </ul>
 
 <div class="tip" style="background:#fff8e1;border-left:4px solid #f9a825;padding:12px 16px;border-radius:0 8px 8px 0;margin:14px 0;font-size:0.95em;">
@@ -163,13 +182,15 @@ def main():
     print("  10:30 AM  - Sliding Rock (11,000 gal/min waterslide)")
     print("  10:50 AM  - Blue Ridge Parkway scenic drive (MP 411.8 -> 417)")
     print("  11:15 AM  - Looking Glass Rock Overlook + optional Skinny Dip Falls")
-    print("  12:00 PM  - DuPont State Forest (Hooker, Triple, High Falls)")
-    print("  2:30 PM   - Drive to downtown Brevard")
-    print("  2:45 PM   - Lunch in Brevard")
-    print("  3:15 PM   - O.P. Taylor's Toy Store!")
-    print("  3:45 PM   - Walk downtown, white squirrels, ice cream")
-    print("  4:15 PM   - Head to cabin")
-    print("  5:00 PM   - Back at cabin")
+    print("  12:00 PM  - DuPont: Hooker Falls parking (Staton Rd) -> 0.4 mi RT")
+    print("  12:20 PM  - Drive 5 min to High Falls parking (Cascade Lake Rd)")
+    print("  12:30 PM  - Triple Falls (0.5 mi) + High Falls (0.3 mi more)")
+    print("  1:50 PM   - Drive to downtown Brevard")
+    print("  2:05 PM   - Lunch in Brevard")
+    print("  2:45 PM   - O.P. Taylor's Toy Store!")
+    print("  3:15 PM   - Walk downtown, white squirrels, ice cream")
+    print("  3:45 PM   - Head to cabin")
+    print("  4:30 PM   - Back at cabin (earlier thanks to 2-lot parking!)")
     print("")
     print("BRP Status: OPEN (MP 382-420, confirmed after Helene repair)")
     print("Check morning-of: https://www.nps.gov/blri/planyourvisit/roadclosures.htm")
