@@ -10,7 +10,7 @@ Run from the trip-plan repo root: python fix_day8_waterfalls.py
 """
 import os
 
-HTML_FILE = "index.html"
+HTML_FILE = "trip-plan/index.html"
 
 def read_html():
     with open(HTML_FILE, "r", encoding="utf-8") as f:
